@@ -1,0 +1,28 @@
+body {
+    background: #EEE;
+    background: linear-gradient(to bottom right, #dddddd, #333333);
+    background-repeat: no-repeat;
+}
+
+#topDiff {
+    display: none;
+    transition: opacity 1s ease;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#playButton {
+    width: 250px;
+    height: 250px;
+    transition: opacity 1s ease;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 28px;
+}
