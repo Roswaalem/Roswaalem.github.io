@@ -10,10 +10,9 @@ playButton.addEventListener('click', () => {
 
     setTimeout(() => {
         playButton.style.display = 'none';
-        topDiff.style.display = 'block';
-        topDiff.style.opacity = '0';
-        topDiff.style.transition = 'opacity 1s';
 
+        topDiff.style.display = 'block'; // Afficher topDiff avant la transition
+        topDiff.style.opacity = '0';
         setTimeout(() => {
             topDiff.style.opacity = '1';
         }, 100);

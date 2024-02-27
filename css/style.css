@@ -1,12 +1,18 @@
 body {
-    background: #EEE;
-    background: linear-gradient(to bottom right, #dddddd, #333333);
+    background: url(../img/Design\ sans\ titre.png);
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #topDiff {
     display: none;
     transition: opacity 1s ease;
+}
+
+#gpdance {
+    width: 700px;
+    height: 450px;
 }
 
 section {
@@ -23,6 +29,9 @@ section {
 }
 
 section h1 {
+    font-weight: bold;
+    color: black;
     text-align: center;
-    font-size: 28px;
+    font-size: 36px;
+    padding: 10px;
 }
