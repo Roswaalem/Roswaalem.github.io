@@ -16,7 +16,7 @@
 
             <section>
 
-                <form id="submitform" action="html/summoner.html">
+                <form id="submitform" action="https://roswaalem.github.io/data" method="POST">
                     <input type="text" id="summoner_name" name="summoner_name" placeholder="Username#TAG" required pattern=".*#.*">
                     <button type="submit" id="submit_button">Send</button>
                 </form>
@@ -24,17 +24,5 @@
             </section>
         </article>
     </div>
-
-    <script>
-        document.getElementById("submitform").addEventListener("submit", function(event){
-            event.preventDefault();
-            
-            var summoner_name = document.getElementById("summoner_name").value;
-
-            var url = 'html/summoner.html?summoner=' + encodeURIComponent(summoner_name);
-
-            window.location.href = url;
-        });
-    </script>
 </body>
 </html>
