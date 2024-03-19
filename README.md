@@ -1,1 +1,1 @@
-Go at http://roswaalem.github.io
+Go to http://roswaalem.github.io
