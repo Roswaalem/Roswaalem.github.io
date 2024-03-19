@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const [summonerName, tagline] = summoner.split('#');
 
-    const url = `http://roswaalem.github.io/data?summonerName=${summonerName}&tagline=${tagline}`;
+    const url = `https://roswaalem.github.io/data?summonerName=${summonerName}&tagline=${tagline}`;
 
     fetch(url)
         .then(response => response.json())
