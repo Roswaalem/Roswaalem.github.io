@@ -1,26 +1,40 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>GLHF | Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <section>
-        <img id="playButton" src="img/play.png" alt="Play Audio">
-        <div id="topDiff">
-            <h1>Ez Skill Issue</h1>
-            <img src="img/gangplank-dance.gif" id="gpdance" alt="gp dance">
-        </div>
-        <audio id="myAudio">
-            <source src="audio/Bamboleo.mp3" type="audio/mpeg">
-            <source src="audio/Bamboleo.ogg" type="audio/ogg">
-            <source src="audio/Bamboleo.wav" type="audio/wav">
-            Your browser does not support the audio element.
-        </audio>
-    </section>
+    <div id="index_container">
+        <article>
+            <header>
+                <h1 id="index_logo">{{Logo}}</h1>
+            </header>
 
-    <script src="js/script.js"></script>
+            <section>
+
+                <form id="submitform" action="html/summoner.html">
+                    <input type="text" id="summoner_name" name="summoner_name" placeholder="Username#TAG" required pattern=".*#.*">
+                    <button type="submit" id="submit_button">Send</button>
+                </form>
+
+            </section>
+        </article>
+    </div>
+
+    <script>
+        document.getElementById("submitform").addEventListener("submit", function(event){
+            event.preventDefault();
+            
+            var summoner_name = document.getElementById("summoner_name").value;
+
+            var url = 'html/summoner.html?summoner=' + encodeURIComponent(summoner_name);
+
+            window.location.href = url;
+        });
+    </script>
 </body>
 </html>

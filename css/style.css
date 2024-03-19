@@ -1,37 +1,429 @@
+/********************/
+/**** CSS Reset ****/
+/******************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
 body {
-    background: url(../img/Design\ sans\ titre.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  line-height: 1;
 }
 
-#topDiff {
-    display: none;
-    transition: opacity 1s ease;
+ol,
+ul {
+  list-style: none;
 }
 
-#gpdance {
-    width: 700px;
-    height: 450px;
+blockquote,
+q {
+  quotes: none;
 }
 
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 
-#playButton {
-    width: 250px;
-    height: 250px;
-    transition: opacity 1s ease;
+/********************/
+/****** Index ******/
+/******************/
+
+#index_container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -50px;
+  left: 0;
 }
 
-section h1 {
-    font-weight: bold;
-    color: black;
+#index_logo {
+  background: linear-gradient(to right, rgb(202, 130, 63), rgb(250, 217, 146));
+  width: 70%;
+  height: 40px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3), 5px 5px 3px rgb(0, 0, 0, 0.8);
+}
+
+/********************/
+/**** Summoner *****/
+/******************/
+
+/* Background image managing */
+
+#container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+
+body {
+  margin: 0;
+  background-image: url("../img/Irelia_DivineSwordSkin.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+}
+
+header {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0); /* Ajoute un fond semi-transparent pour mieux voir le flou */
+}
+
+/* Notifications managing */
+
+.notification {
+  position: fixed;
+
+  top: 80px;
+  left: 20px;
+
+  padding: 20px 0 0 0;
+
+  height: 50px;
+
+  border-radius: 5px;
+
+  z-index: 9999;
+
+  opacity: 0;
+
+  border-radius: 5px;
+
+  transition: opacity 0.5s ease;
+
+  text-align: center;
+
+  font-size: 16px;
+}
+
+.notification h2 {
+  position: absolute;
+
+  border-radius: 5px;
+
+  width: 150px;
+
+  top: -15px;
+  left: 25px;
+}
+
+.notification.show {
+  opacity: 1;
+}
+
+/* Font managing */
+
+a {
+  text-decoration: none;
+  color: rgb(182, 156, 84);
+  padding: 2px 5px;
+}
+
+a:hover {
+  background-color: rgb(12, 11, 9);
+  transition: background-color 0.3s ease;
+}
+
+a:visited {
+  color: rgb(182, 156, 84);
+}
+
+body {
+  font-family: mv boli, arial, sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+
+  margin: 0.67em 0;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+/* Navbar managing */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 30px;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+
+  z-index: 1000;
+}
+
+nav ul {
+  position: relative;
+
+  margin: 0 auto;
+  padding: 0;
+
+  width: 300px;
+  height: 30px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Header managing */
+header {
+    position: static;
+
+    margin: 35px auto 20px;
+
     text-align: center;
-    font-size: 36px;
-    padding: 10px;
+}
+
+/* Section managing */
+section {
+    position: relative;
+
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(2px);
+
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 20px;
+
+    width: 450px;
+    height: auto;
+
+    border-radius: 0 10px 0 10px;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3), 5px 5px 3px rgb(0, 0, 0, 0.8);
+
+    text-align: center;
+}
+
+section:first-of-type {
+    width: 200px;
+}
+
+/* section titles managing */
+
+h2 {
+  position: relative;
+
+  top: -33px;
+
+  padding: 5px 0;
+  margin: 0 auto;
+  margin-bottom: -15px;
+
+  width: 200px;
+
+  background: linear-gradient(to right, rgb(202, 130, 63), rgb(250, 217, 146));
+
+  border: 1.5px solid black;
+  border-radius: 0 5px 0 5px;
+  box-shadow: 0 -3px 7px rgba(0, 0, 0, 0.3);
+}
+
+/* text-input section managing */
+
+#summoner_name {
+  position: relative;
+
+  margin: 15px auto;
+
+  height: 20px;
+  width: 200px;
+
+  text-align: center;
+
+  border-radius: 5px;
+  border: 2px solid black;
+
+  background: linear-gradient(135deg, #87CEEB, #40E0D0);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#submit_button {
+  position: relative;
+
+  height: 30px;
+  width: 70px;
+
+  font-weight: bold;
+
+  background: linear-gradient(to bottom, rgb(1, 198, 224), rgb(11, 119, 146));
+}
+
+/* summoner icon managing */
+
+#summoner_icon {
+  position: relative;
+
+  margin: 0 auto;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+  border: 2px solid black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* puuid managing */
+
+.subtitle {
+  position: relative;
+  display: flex;
+
+  margin: 15px auto;
+  padding: 5px 0;
+
+  width: 200px;
+
+  background: linear-gradient(to right, rgb(202, 130, 63), rgb(250, 217, 146));
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1.5px solid black;
+  border-radius: 5px;
+}
+
+#puuid {
+  position: relative;
+
+  margin: 15px auto;
+
+  height: 20px;
+  width: 200px;
+
+  text-align: center;
+
+  border-radius: 5px;
+  border: 2px solid black;
+
+  background: linear-gradient(135deg, #87CEEB, #40E0D0);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#puuid h5 {
+  padding-left: 5px;
+
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#copy_button {
+  position: relative;
+
+  top: 1px;
+
+  font-size: 24px;
+
+  background: transparent;
+  border: transparent;
+}
+
+#copy_button:hover {
+  font-weight: bold;
+}
+
+/* Summoner level managing */
+
+#summoner_lvl {
+  font-weight: bold;
 }
