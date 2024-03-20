@@ -14,10 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
-            // Mettez à jour les éléments HTML avec les données récupérées
-            document.getElementById("nom_du_joueur").textContent = data.nomDuJoueur;
-            document.getElementById("niveau_du_joueur").textContent = data.niveauDuJoueur;
-            // Continuez à mettre à jour les autres éléments en fonction de vos données
+            console.log(data);
         })
         .catch(error => console.error(error));
 });
