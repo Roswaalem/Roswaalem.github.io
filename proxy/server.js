@@ -54,7 +54,7 @@ exports.handler = async (event, context) => {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ response1: accountData })
+      body: JSON.stringify({ response1: accountData, response2: summonerData })
     };
   } catch (error) {
     return {
