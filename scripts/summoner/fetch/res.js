@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const [summonerName, tagline] = summoner.split('#');
 
-    const url = `https://roswaalem.github.io/.netlify/functions/server?summonerName=${summonerName}&tagline=${tagline}`;
+    const url = `http://roswaalem.github.io/.netlify/functions/server?summonerName=${summonerName}&tagline=${tagline}`;
 
     fetch(url)
         .then(response => {
