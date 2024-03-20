@@ -38,10 +38,10 @@ exports.handler = async (event, context) => {
 
     const summonerResponse = await fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${api_key}`);
     const summonerData = await summonerResponse.json();
-/*
+
     const championsResponse = await fetch(`https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/top?count=3&api_key=${api_key}`);
     const championsData = await championsResponse.json();
-
+/*
     const championIds = championsData.map(champion => champion.championId);
 
     const championsDataResponse = await fetch(`https://ddragon.leagueoflegends.com/cdn/14.5.1/data/en_US/championFull.json`);
@@ -54,7 +54,7 @@ exports.handler = async (event, context) => {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ response1: accountData, response2: summonerData })
+      body: JSON.stringify({ response1: accountData, response2: summonerData, response3: championsData })
     };
   } catch (error) {
     return {
