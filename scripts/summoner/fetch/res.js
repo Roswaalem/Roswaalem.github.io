@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const [summonerName, tagline] = summoner.split('#');
 
-    const url = `/server?summonerName=${summonerName}&tagline=${tagline}`;
+    const url = `https://bright-stardust-bbf42d.netlify.app/.netlify/functions/server?summonerName=${summonerName}&tagline=${tagline}`;
 
     fetch(url)
         .then(response => {
