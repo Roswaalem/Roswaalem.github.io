@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("summoner_icon").src = "https://ddragon.leagueoflegends.com/cdn/14.5.1/img/profileicon/" + data.response2.profileIconId + ".png";
             document.getElementById("summoner_level").innerText = data.response2.summonerLevel;
 
-            /*document.getElementById("champion1_icon").src = "https://ddragon.leagueoflegends.com/cdn/14.5.1/img/champion/" + data.championNames[0] + ".png";
+            document.getElementById("champion1_icon").src = "https://ddragon.leagueoflegends.com/cdn/14.5.1/img/champion/" + data.championNames[0] + ".png";
             document.getElementById("champion1_name").innerText = data.championNames[0];
             document.getElementById("champion1_mastery").innerText = data.response3[0].championPoints;
 
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             document.getElementById("champion3_icon").src = "https://ddragon.leagueoflegends.com/cdn/14.5.1/img/champion/" + data.championNames[2] + ".png";
             document.getElementById("champion3_name").innerText = data.championNames[2];
-            document.getElementById("champion3_mastery").innerText = data.response3[2].championPoints;*/
+            document.getElementById("champion3_mastery").innerText = data.response3[2].championPoints;
 
             console.log(data);
         })
