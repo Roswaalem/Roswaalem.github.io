@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     fetch(url)
         .then(response => {
-            if (!response.ok) {
+            if(!response.ok) {
                 throw new Error('Network response was not ok');
             }
             return response.json();
@@ -22,14 +22,16 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("summoner_level").innerText = data.response2.summonerLevel;
 
             document.getElementById("champion1_icon").src = "https://ddragon.leagueoflegends.com/cdn/14.5.1/img/champion/" + data.response3[0].championId + ".png";
-            document.getElementById("champion1_name").innerText = data.response3[0].championId;
+            document.getElementById("champion1_name").innerText = data.championNames[0];
             document.getElementById("champion1_mastery").innerText = data.response3[0].championPoints;
 
             document.getElementById("champion2_icon").src = "https://ddragon.leagueoflegends.com/cdn/14.5.1/img/champion/" + data.response3[1].championId + ".png";
-            document.getElementById("champion2_name").innerText = data.response3[1];
+            document.getElementById("champion2_name").innerText = data.championNames[1];
+            document.getElementById("champion2_mastery").innerText = data.response3[1].championPoints;
 
             document.getElementById("champion3_icon").src = "https://ddragon.leagueoflegends.com/cdn/14.5.1/img/champion/" + data.response3[2].championId + ".png";
-            document.getElementById("champion3_name").innerText = data.response3[2];
+            document.getElementById("champion3_name").innerText = data.championNames[2];
+            document.getElementById("champion3_mastery").innerText = data.response3[2].championPoints;
 
             console.log(data);
         })
