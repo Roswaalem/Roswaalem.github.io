@@ -5,20 +5,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const summoner = params.get('summoner');
 
     const [summonerName, tagline] = summoner.split('#');
+    
+    const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
     const fetchData = async (summonerName, tagline) => {
         try {
             // Fetching account data
-            const accountResponse = await fetch(`https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${summonerName}/${tagline}?api_key=${api_key}`);
+            const accountResponse = await fetch(proxyUrl + `https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${summonerName}/${tagline}?api_key=${api_key}`);
             const accountData = await accountResponse.json();
 
             // Fetching identifiers
             const puuid = accountData.puuid;
-            const identifierResponse = await fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${api_key}`);
+            const identifierResponse = await fetch(proxyUrl + `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${api_key}`);
             const identifierData = await identifierResponse.json();
 
             // Fetching champion masteries
-            const championResponse = await fetch(`https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/top?count=3&api_key=${api_key}`);
+            const championResponse = await fetch(proxyUrl + `https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/top?count=3&api_key=${api_key}`);
             const championData = await championResponse.json();
 
             return { response1: accountData, response2: identifierData, response3: championData };
