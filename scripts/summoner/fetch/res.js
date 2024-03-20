@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
-            // Mettez à jour le DOM avec les données reçues
             document.querySelector("h1").innerText = data.response1.gameName;
             document.getElementById("summoner_name").innerText = data.response1.gameName + "#" + data.response1.tagLine;
             document.querySelector("h5").innerText = data.response1.puuid;
