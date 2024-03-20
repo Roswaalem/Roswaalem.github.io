@@ -1,5 +1,4 @@
 import { api_key } from "../scripts/data.js";
-const fetch = require('node-fetch');
 
 export async function handler(event, context) {
   const { summonerName, tagline } = event.queryStringParameters;
