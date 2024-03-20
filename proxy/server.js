@@ -1,4 +1,4 @@
-import { api_key } from "../scripts/data.js";
+/*import { api_key } from "../scripts/data.js";
 import fetch from 'node-fetch';
 
 exports.handler = async (event, context) => {
@@ -23,7 +23,7 @@ exports.handler = async (event, context) => {
     };
   }
 };
-/*
+*/
 
 import { api_key } from "../scripts/data.js";
 
@@ -63,4 +63,3 @@ exports.handler = async (event, context) {
     };
   }
 }
-*/

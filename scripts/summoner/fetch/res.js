@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return response.json();
         })
         .then(data => {
+            /*
             document.querySelector("h1").innerText = data.response1.gameName;
             document.getElementById("summoner_name").innerText = data.response1.gameName + "#" + data.response1.tagLine;
             document.querySelector("h5").innerText = data.response1.puuid;
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("champion2_name").innerText = data.response3[1];
 
             document.getElementById("champion3_icon").src = "https://ddragon.leagueoflegends.com/cdn/14.5.1/img/champion/" + data.response3[2] + ".png";
-            document.getElementById("champion3_name").innerText = data.response3[2];
+            document.getElementById("champion3_name").innerText = data.response3[2];*/
 
             console.log(data);
         })
