@@ -33,12 +33,12 @@ exports.handler = async (event, context) => {
   try {
     const accountResponse = await fetch(`https://europe.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${summonerName}/${tagline}?api_key=${api_key}`);
     const accountData = await accountResponse.json();
-/*
+
     const puuid = accountData.puuid;
 
     const summonerResponse = await fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuid}?api_key=${api_key}`);
     const summonerData = await summonerResponse.json();
-
+/*
     const championsResponse = await fetch(`https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/top?count=3&api_key=${api_key}`);
     const championsData = await championsResponse.json();
 
