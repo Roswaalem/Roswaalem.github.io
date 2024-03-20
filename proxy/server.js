@@ -42,11 +42,16 @@ exports.handler = async (event, context) => {
     const championsResponse = await fetch(`https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuid}/top?count=3&api_key=${api_key}`);
     const championsData = await championsResponse.json();
 
-    const championIds = championsData.map(champion => champion.championId);
+    const championIds = [];
+    championsData.forEach(champion => championIds.push(champion.championId));
 
     const championsDataResponse = await fetch(`https://ddragon.leagueoflegends.com/cdn/14.5.1/data/en_US/championFull.json`);
     const championsFullData = await championsDataResponse.json();
-    const championNames = championIds.map(championId => championsFullData.data[championId].name);
+    const championNames = [];
+    championIds.forEach(championId => {
+      const championName = championsFullData.data[Object.keys(championsFullData.data).find(key => championsFullData.data[key].key == championId)].name;
+      championNames.push(championName);
+    });
 
     return {
       statusCode: 200,
