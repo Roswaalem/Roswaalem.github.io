@@ -27,7 +27,7 @@ exports.handler = async (event, context) => {
 
 import { api_key } from "../scripts/data.js";
 
-exports.handler = async (event, context) {
+exports.handler = async (event, context) => {
   const { summonerName, tagline } = event.queryStringParameters;
 
   try {
