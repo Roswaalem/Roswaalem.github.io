@@ -1,4 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const params = new URLSearchParams(window.location.search);
     const summoner = params.get('summoner');
 
@@ -21,8 +21,8 @@
         .catch(error => console.error(error));
 });
 
-*/
 
+/*
 document.addEventListener("DOMContentLoaded", function() {
     const params = new URLSearchParams(window.location.search);
     const summoner = params.get('summoner');
@@ -61,3 +61,4 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error(error));
 });
+*/
