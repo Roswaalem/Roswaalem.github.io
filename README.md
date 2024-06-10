@@ -4,7 +4,7 @@ https://roswaalem.github.io/
 
 This website serves as a hub to all of my projects. Source code of every of them is available in my github repositories.
 
-2- Incoming features
+2- In coming features
 
 I am currently working on a LoL tracker, an ACNH Checker and also some video games. It'll take times to be pushed because at want them to be in an advanced enough stage to be shown in public.
 
