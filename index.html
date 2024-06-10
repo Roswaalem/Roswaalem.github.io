@@ -1,40 +1,16 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>GLHF | Home</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-<body>
-    <div id="index_container">
-        <article>
-            <header>
-                <h1 id="index_logo">{{Logo}}</h1>
-            </header>
-
-            <section>
-
-                <form id="submitform" action="html/summoner.html">
-                    <input type="text" id="summoner_name" name="summoner_name" placeholder="Username#TAG" required pattern=".*#.*">
-                    <button type="submit" id="submit_button">Send</button>
-                </form>
-
-            </section>
-        </article>
-    </div>
-
-    <script>
-        document.getElementById("submitform").addEventListener("submit", function(event){
-            event.preventDefault();
-            
-            var summoner_name = document.getElementById("summoner_name").value;
-
-            var url = 'html/summoner.html?summoner=' + encodeURIComponent(summoner_name);
-
-            window.location.href = url;
-        });
-    </script>
-</body>
+    <body>
+        <div class="text-container">
+            <h1>Oops, this page is not available yet...</h1>
+            <p>This website is under construction, please come back later. (Error 2)</p>
+        </div>
+    </body>
 </html>
