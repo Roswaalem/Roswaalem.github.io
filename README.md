@@ -10,4 +10,4 @@ I am currently working on a LoL tracker, an ACNH Checker and also some video gam
 
 3- Who are you ?
 
-I'm just a basic computer science student living in France, and I want to show brand new ways to make projects by sharing mines.
+I'm just a basic computer science student living in France, and I want to show brand new ways to make projects by sharing mine.
