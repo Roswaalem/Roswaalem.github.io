@@ -6,7 +6,7 @@ This website serves as a hub to all of my projects. Source code of every of them
 
 2- In coming features
 
-I am currently working on a LoL tracker, an ACNH Checker and also some video games. It'll take times to be pushed because I want them to be in an advanced enough stage to be shown in public.
+I am currently working on a LoL tracker, a personal hub and also some video games. It'll take times to be pushed because I want them to be in an advanced enough stage to be shown in public.
 
 3- Who are you ?
 
