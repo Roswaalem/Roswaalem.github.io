@@ -57,7 +57,7 @@ table {
 
 /**
 
-    Page editing
+	Page editing
 
 **/
 
@@ -144,9 +144,9 @@ nav ul li a {
 
 nav > ul > li > ul {
 	position: absolute;
-    display: none;
+	display: none;
 	background-color: #231942;
-    width: 100%;
+	width: 100%;
 	top: 33px;
 	border-radius: 0 0 5px 5px;
 	padding-bottom: 3px;
@@ -218,7 +218,6 @@ main {
 	margin: 0 auto;
 	clear: both;
 	text-align: left;
-	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .tabs .tab {
@@ -299,4 +298,33 @@ button {
 button:hover {
 	background-color: #D4A5D4;
 	transform: scale(1.05);
+}
+
+/**
+
+	Responsive Design
+
+**/
+
+@media (max-width: 768px) {
+	header {
+		height: 35vh;
+	}
+
+	#banner {
+		height: 35vh;
+		background-position: -200px 50px;
+	}
+
+	nav ul {
+		flex-direction: column;
+	}
+
+	nav ul li {
+		margin: 8px 0;
+	}
+
+	nav > ul > li:last-child {
+		margin: 8px 0;
+	}
 }
