@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Honkai : Star Raildle</title>
+        <link rel="stylesheet" href="./public/styles/style.css">
+        <script src="./public/scripts/script.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <img src="./public/images/sr_logo.png" alt="Honkai: Star Raildle Logo" class="logo">
+        </header>
+
+        <main>
+            <div class="tooltip">
+                <p>Guess the daily character</p>
+                <p class="additional">*Currently updated to version 3.2</p>
+            </div>
+
+            <div class="game-container">
+                <div class="input-container">
+                    <input type="text" id="guess-input" placeholder="Type here..." maxlength="99">
+                </div>
+
+                <div class="indicaors" style="color: white; background: rgba(47, 57, 117, 0.5); padding: 10px; border-radius: 10px;">
+                    <span id="tries">Tries: 0 | </span>
+                    <span id="streak">Streak: 0 | </span>
+                    <span id="max-streak">Max Streak: 0</span>
+                </div>
+
+                <div class="guess-infos-container" id="guess-infos-container">
+                    <div class="guess-info" id="name"><p>Name</p></div>
+                    <div class="guess-info" id="gender"><p>Gender</p></div>
+                    <div class="guess-info" id="path"><p>Path</p></div>
+                    <div class="guess-info" id="type"><p>Element</p></div>
+                    <div class="guess-info" id="rarity"><p>Rarity</p></div>
+                    <div class="guess-info" id="release"><p>Release version</p></div>
+                </div>
+
+                <hr>
+
+                <div id="guess-results-container"></div>
+
+                <div id="suggestions-container"></div>
+            </div>
+        </main>
+    </body>
+</html>
